@@ -132,11 +132,11 @@ class Genericuser extends \booosta\base\Module
   public function get_user_type() { return $this->user_type; }
   public function get_username() { return $this->username; }
   public function get_id() { return $this->id; }
-  public function get_settings() { return $this->settings; }
+  public function get_usersettings() { return $this->settings; }
 
-  public function get_setting($key)
+  public function get_usersetting($key)
   {
-    $settings = $this->get_settings();
+    $settings = $this->get_usersettings();
     return $settings[$key];
   }
 }
