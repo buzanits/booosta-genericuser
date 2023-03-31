@@ -10,7 +10,7 @@ class Genericuser extends \booosta\base\Module
   protected $valid;
   protected $user_type = 'user';
   public $authenticator;
-  protected $id, $username, $password;
+  protected $id, $username;
   protected $settings;
   
 
@@ -41,7 +41,6 @@ class Genericuser extends \booosta\base\Module
 
       $this->id = $this->authenticator->get_id($username);
       $this->username = $username;
-      $this->password = $password;
       $this->settings = $this->authenticator->get_settings($username);
 
       $this->after_auth_success();
