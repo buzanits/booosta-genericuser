@@ -122,7 +122,7 @@ class Genericuser extends \booosta\base\Module
     $obj->set('user', $username);
     $obj->set('time', date('Y-m-d H:i:s'));
     $obj->set('ip', $_SERVER['REMOTE_ADDR']);
-    $obj->set('success', $success);
+    $obj->set('success', $success ? 1 : 0);
     $obj->set('usertype', $this->user_type);
 
     $obj->insert();
